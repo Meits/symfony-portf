@@ -14,9 +14,6 @@ class IndexController extends Controller
     
     public function index(TranslatorInterface $translator,Request $request)
     {
-        
-        var_dump($request->getLocale());
-        
         $translated = $translator->trans('Symfony is great');
         return $this->render('index/index.html.twig', [
             'controller_name' => 'IndexController',

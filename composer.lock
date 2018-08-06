@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62a753c526eae53ab9f399d7628d4083",
+    "content-hash": "038c84b0d4a6affba1cf8fbe583763e0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3675,16 +3675,16 @@
         },
         {
             "name": "symfony/security",
-            "version": "v4.0.9",
+            "version": "v4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security.git",
-                "reference": "3ba77b4b63fa51f048ebbf8291079a13e31eb6a6"
+                "reference": "fa46e38ff4dea2d3949630efd33ed73e2ac0850a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security/zipball/3ba77b4b63fa51f048ebbf8291079a13e31eb6a6",
-                "reference": "3ba77b4b63fa51f048ebbf8291079a13e31eb6a6",
+                "url": "https://api.github.com/repos/symfony/security/zipball/fa46e38ff4dea2d3949630efd33ed73e2ac0850a",
+                "reference": "fa46e38ff4dea2d3949630efd33ed73e2ac0850a",
                 "shasum": ""
             },
             "require": {
@@ -3721,7 +3721,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -3748,7 +3748,7 @@
             ],
             "description": "Symfony Security Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-30T01:23:47+00:00"
+            "time": "2018-06-22T08:59:39+00:00"
         },
         {
             "name": "symfony/security-bundle",

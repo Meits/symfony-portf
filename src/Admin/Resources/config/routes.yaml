@@ -1,0 +1,3 @@
+admin-index:
+    path: /dashboard/index
+    controller: App\Admin\Controller\IndexController::index
