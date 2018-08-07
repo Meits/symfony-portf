@@ -2,5 +2,12 @@ index:
     path: /{_locale}
     controller: App\Controller\IndexController::index
     defaults:   { _locale: ru }
+    prefix : /public
     requirements:
         _locale: en|ru
+
+admin_bundle:
+    # loads routes from the given routing file stored in some bundle
+    resource: '@AdminBundle/Resources/config/routes.yaml'
+    prefix: dashboard
+
