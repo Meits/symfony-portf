@@ -3752,16 +3752,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v4.0.9",
+            "version": "v4.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "dfabecc1fd3e626e676edef97753a645b4de85a5"
+                "reference": "0046b79352c7f00aa3f32ed21f1da645d23cbcad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/dfabecc1fd3e626e676edef97753a645b4de85a5",
-                "reference": "dfabecc1fd3e626e676edef97753a645b4de85a5",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/0046b79352c7f00aa3f32ed21f1da645d23cbcad",
+                "reference": "0046b79352c7f00aa3f32ed21f1da645d23cbcad",
                 "shasum": ""
             },
             "require": {
@@ -3769,7 +3769,7 @@
                 "php": "^7.1.3",
                 "symfony/dependency-injection": "^3.4.3|^4.0.3",
                 "symfony/http-kernel": "~3.4|~4.0",
-                "symfony/security": "~3.4|~4.0"
+                "symfony/security": "~3.4.12|~4.0.12|^4.1.1"
             },
             "conflict": {
                 "symfony/console": "<3.4",
@@ -3828,7 +3828,7 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-04-06T07:35:43+00:00"
+            "time": "2018-07-26T09:08:35+00:00"
         },
         {
             "name": "symfony/serializer",

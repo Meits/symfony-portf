@@ -7,7 +7,11 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
+            anonymous: ~
+            #http_basic: ~
+            form_login:
+              login_path: login
+              check_path: login
 
             # activate different ways to authenticate
 
@@ -21,4 +25,4 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/dashboard, roles: ROLE_ADMIN }
