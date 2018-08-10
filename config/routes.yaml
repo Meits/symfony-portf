@@ -2,9 +2,12 @@ index:
     path: /{_locale}
     controller: App\Controller\IndexController::index
     defaults:   { _locale: ru }
-    prefix : /public
     requirements:
         _locale: en|ru
+
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login
 
 admin_bundle:
     # loads routes from the given routing file stored in some bundle

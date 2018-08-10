@@ -2,4 +2,13 @@ server start
 php bin/console server:start 0.0.0.0:8000
 
 
-bin/console translation:update --dump-messages --force en 
+bin/console translation:update --dump-messages --force en
+
+db create
+php bin/console doctrine:database:create
+
+make entity
+php bin/console make:entity
+
+make migration
+php bin/console make:migration
