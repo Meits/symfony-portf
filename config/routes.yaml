@@ -9,6 +9,10 @@ login:
     path: /login
     controller: App\Controller\SecurityController::login
 
+user_registration:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+
 admin_bundle:
     # loads routes from the given routing file stored in some bundle
     resource: '@AdminBundle/Resources/config/routes.yaml'

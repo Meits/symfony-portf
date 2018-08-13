@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {# templates/security/login.html.twig #}
+    {# ... you will probably extend your base template, like base.html.twig #}
+
+    <div class="content" id="ajax-content">
+    <div class="text-intro">
+
+    <h1>Login</h1>
+
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+<input type="submit" class="button-submit" value="Register" />
+{{ form_end(form) }}
+    </div>
+    </div>
+
+{% endblock %}
