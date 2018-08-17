@@ -165,9 +165,11 @@ class User implements UserInterface, \Serializable
      */
     public function getRoles()
     {
-        var_dump($this->groups[0]->role);
-        exit('ku');
-        return $this->groups->toArray();
+        $arr = array();
+        foreach ($this->groups as $group) {
+            $arr[] = $group->getRole();
+        }
+        return array('ROLE_ADMIN');
     }
 
     /**

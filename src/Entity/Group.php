@@ -2,10 +2,13 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\GroupRepository")
+ * @ORM\Table(name="groups")
  */
 class Group
 {
@@ -13,6 +16,7 @@ class Group
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     *
      */
     private $id;
 
@@ -30,6 +34,11 @@ class Group
      * @ORM\ManyToMany(targetEntity="User", mappedBy="groups")
      */
     private $users;
+
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -56,6 +65,34 @@ class Group
     public function setRole(string $role): self
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addGroup($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->contains($user)) {
+            $this->users->removeElement($user);
+            $user->removeGroup($this);
+        }
 
         return $this;
     }
