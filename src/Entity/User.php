@@ -167,9 +167,10 @@ class User implements UserInterface, \Serializable
     {
         $arr = array();
         foreach ($this->groups as $group) {
+
             $arr[] = $group->getRole();
         }
-        return array('ROLE_ADMIN');
+        return $arr;
     }
 
     /**

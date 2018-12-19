@@ -12,12 +12,17 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        #portfolio:
+        #    anonymous: ~
+        #    http_basic: ~
+        #    pattern: ^/portfolio
         main:
             anonymous: ~
             #http_basic: ~
             form_login:
               login_path: login
               check_path: login
+              csrf_token_generator: security.csrf.token_manager
 
             # activate different ways to authenticate
 
@@ -32,3 +37,4 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/dashboard, roles: ROLE_ADMIN }
+        - { path: ^/portfolio, roles: [ROLE_ADMIN,ROLE_USER] }

@@ -12,10 +12,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function index(Request $request)
     {
-        return $this->render('@Admin/index/index.html.twig', []);
+        return $this->render('@Admin/index/index.html.twig', $this->data);
     }
 }
